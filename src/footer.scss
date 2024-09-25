@@ -1,0 +1,16 @@
+@use 'utils';
+
+.footer {
+  @include utils.flexColCenter();
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  gap: 1rem;
+  border-top: 1px solid $color-neutral-grey-500;
+}
+
+.footer p {
+  color: $color-neutral-grey-900-78;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+}

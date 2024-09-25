@@ -1,0 +1,43 @@
+@mixin flexColCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexCol($ai: stretch) {
+  display: flex;
+  flex-direction: column;
+  align-items: $ai;
+}
+
+@mixin flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexRow($jc: center, $ai: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin slideBottom($delay: 0) {
+  -webkit-animation: slide-bottom 1s ease-in-out both;
+  animation: slide-bottom 1s ease-in-out both;
+
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@mixin bounce {
+  -webkit-animation: bounce 3s ease-in-out infinite;
+  animation: bounce 3s ease-in-out infinite;
+}
+
+@mixin shadow-drop {
+  -webkit-animation: shadow-drop-2-center 0.3s ease-in-out both;
+  animation: shadow-drop-2-center 0.3s ease-in-out both;
+}

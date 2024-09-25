@@ -1,0 +1,68 @@
+@use 'utils';
+
+.btn-icon {
+  @include utils.flexRowCenter();
+
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid $color-brand-primary-light;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: width;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  line-height: 2rem;
+
+  .svgIcon {
+    width: 3.2rem;
+    height: 3.2rem;
+    fill: $color-neutral-grey-900;
+  }
+
+  &::before {
+    @include utils.flexRowCenter();
+    position: absolute;
+    left: -20px;
+    color: $color-white;
+    font-size: 0px;
+  }
+
+  &:hover {
+    width: 14rem;
+    height: 4rem;
+    border-radius: 50px;
+    background-color: $color-brand-primary;
+
+    .svgIcon {
+      transform: translateX(500%);
+    }
+
+    &::before {
+      opacity: 1;
+      left: unset;
+      color: $color-white;
+      text-wrap: nowrap;
+      height: 4rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.github {
+  &::before {
+    content: 'View on GitHub';
+  }
+}
+
+.instagram {
+  &::before {
+    content: 'Instagram';
+  }
+}
+
+.btn-icon:active {
+  transform: translate(2px, 2px);
+}

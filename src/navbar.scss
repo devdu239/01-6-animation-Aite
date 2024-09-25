@@ -1,0 +1,82 @@
+@use 'utils';
+
+.navbar {
+  width: 100%;
+  @include utils.flexRow(space-between);
+
+  height: 6.4rem;
+  border-bottom: 1px solid $color-neutral-grey-500;
+}
+.nav-left {
+  @include utils.flexRowCenter;
+  gap: 3.2rem;
+}
+
+.nav-logo {
+  @include utils.flexRowCenter;
+  gap: 0.8rem;
+
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: $color-neutral-grey-900;
+}
+
+.nav-searchbar {
+  @include utils.flexRowCenter(); // display: flex;
+  height: 4rem;
+  max-width: 20rem;
+
+  padding: 0.4rem 1.2rem;
+  gap: 2.8rem;
+  border-radius: 0.8rem;
+  background: $color-neutral-grey-200;
+}
+
+.searchbar-search {
+  @include utils.flexRowCenter();
+  gap: 0.6rem;
+  color: $color-neutral-grey-900-78;
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.searchbar-command-k {
+  @include utils.flexRowCenter();
+  height: 2.2rem;
+  padding: 0 8px;
+  border-radius: 4px;
+  border: 1px solid $color-neutral-grey-500;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: center;
+  color: $color-neutral-grey-900-78;
+
+  text-wrap: nowrap;
+}
+
+.nav-menu {
+  @include utils.flexRowCenter();
+  gap: 2.4rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: $color-neutral-grey-900;
+    white-space: nowrap;
+    cursor: pointer;
+
+    img {
+      width: 1.4rem;
+      padding-left: 4px;
+    }
+  }
+}

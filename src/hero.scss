@@ -1,0 +1,97 @@
+@use 'utils';
+
+.hero {
+  @include utils.flexRowCenter;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  width: 100%;
+  flex: 1 1 50%;
+  @include utils.flexCol();
+  gap: 5.2rem;
+}
+
+.hero-text {
+  @include utils.flexCol();
+  gap: 1.6rem;
+
+  h1 {
+    max-width: 80%;
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 6.4rem;
+    color: $color-neutral-grey-900;
+
+    @include utils.slideBottom(0.2s);
+  }
+
+  .brand {
+    background: linear-gradient(111deg, #bd34fe 0%, #41d1ff 30%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include utils.slideBottom(0.1s);
+  }
+
+  p {
+    max-width: 92%;
+    color: $color-neutral-grey-900-78;
+    font-size: 2rem;
+    font-weight: 00;
+    line-height: 4rem;
+    @include utils.slideBottom(0.3s);
+  }
+}
+
+.hero-right {
+  .img-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include utils.bounce();
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 82%;
+      height: 82%;
+      border-radius: 16rem;
+      background: linear-gradient(315deg, #47caff 50%, #bd34fe 50%);
+      filter: blur(100px);
+      z-index: -100;
+    }
+  }
+}
+
+.hero-btns {
+  @include utils.flexRow(flex-start, center);
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  @include utils.slideBottom(0.3s);
+
+  .icon {
+    @include utils.flexRowCenter;
+  }
+
+  svg {
+    padding: 0.2rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 8px;
+    fill: $color-neutral-grey-900;
+    &:hover {
+      fill: $color-brand-primary-dark;
+    }
+  }
+}

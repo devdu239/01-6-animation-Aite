@@ -1,0 +1,56 @@
+@use 'utils';
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+$color-brand-primary: #646cff;
+$color-brand-primary-dark: #5157ce;
+$color-brand-primary-light: #eff0ff;
+$color-neutral-grey-900: #3c3c43;
+$color-neutral-grey-900-78: rgba(60, 60, 67, 0.78);
+$color-neutral-grey-500: #e2e2e3;
+$color-neutral-grey-400: #ebebef;
+$color-neutral-grey-200: rgba(142, 150, 170, 0.14);
+$color-white: #ffffff;
+
+*,
+*::before,
+*::after {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100dvw;
+  @include utils.flexColCenter();
+  font-size: 1.6rem;
+}
+
+.demo {
+  display: flex;
+  :nth-child(1) {
+    height: 100px;
+    aspect-ratio: 4/3;
+    background-color: darkgrey;
+  }
+
+  :nth-child(2) {
+    height: 150px;
+    aspect-ratio: 1;
+    background-color: lavender;
+  }
+
+  :nth-child(3) {
+    height: 200px;
+    aspect-ratio: 7/5;
+    background-color: lemonchiffon;
+  }
+}
